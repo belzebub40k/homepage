@@ -35,6 +35,7 @@ You can also find a list of all available service widgets in the sidebar navigat
 - [DiskStation](diskstation.md)
 - [Dispatcharr](dispatcharr.md)
 - [Dockhand](dockhand.md)
+- [DOCSight](docsight.md)
 - [DownloadStation](downloadstation.md)
 - [Emby](emby.md)
 - [ESPHome](esphome.md)
