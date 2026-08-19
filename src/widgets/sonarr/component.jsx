@@ -2,7 +2,7 @@ import Block from "components/services/widget/block";
 import Container from "components/services/widget/container";
 import { useTranslation } from "next-i18next/pages";
 
-import QueueEntry from "../../components/widgets/queue/queueEntry";
+import QueueEntry, { formatTimeLeft } from "../../components/widgets/queue/queueEntry";
 
 import useWidgetAPI from "utils/proxy/use-widget-api";
 
@@ -81,7 +81,7 @@ export default function Component({ service }) {
         queueDetailsData.map((queueEntry) => (
           <QueueEntry
             progress={getProgress(queueEntry.sizeLeft, queueEntry.size)}
-            timeLeft={queueEntry.timeLeft}
+            timeLeft={formatTimeLeft(queueEntry.timeLeft, widget?.humanizeQueueTime, t)}
             title={getTitle(queueEntry, seriesData) ?? t("sonarr.unknown")}
             activity={getActivity(queueEntry.status, queueEntry.trackedDownloadState)}
             key={`${queueEntry.seriesId}-${queueEntry.episodeId}`}

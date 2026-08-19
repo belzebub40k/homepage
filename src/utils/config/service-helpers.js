@@ -401,6 +401,7 @@ export function cleanServiceGroups(groups) {
 
           // sonarr, radarr
           enableQueue,
+          humanizeQueueTime,
 
           // stocks
           watchlist,
@@ -554,6 +555,7 @@ export function cleanServiceGroups(groups) {
         }
         if (["sonarr", "radarr"].includes(type)) {
           if (enableQueue !== undefined) widget.enableQueue = JSON.parse(enableQueue);
+          if (humanizeQueueTime !== undefined) widget.humanizeQueueTime = !!JSON.parse(humanizeQueueTime);
         }
         if (type === "truenas") {
           if (enablePools !== undefined) widget.enablePools = JSON.parse(enablePools);

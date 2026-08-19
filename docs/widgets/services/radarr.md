@@ -17,4 +17,5 @@ widget:
   url: http://radarr.host.or.ip
   key: apikeyapikeyapikeyapikeyapikey
   enableQueue: true # optional, defaults to false
+  humanizeQueueTime: true # optional, defaults to false, shows e.g. "1h32m" instead of "01:32:07"
 ```
